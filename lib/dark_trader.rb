@@ -56,7 +56,3 @@ def get_currency_name_and_value
 	return my_hash
 
 end
-
-
-
-puts get_currency_name_and_value.has_key?("BTC")

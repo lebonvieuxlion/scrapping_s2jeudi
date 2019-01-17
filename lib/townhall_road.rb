@@ -62,3 +62,5 @@ def get_all_email
 	return all_email
 
 end
+
+puts get_all_email[0]
