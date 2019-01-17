@@ -75,5 +75,21 @@ def get_deputy_secondname(url)
 
 end
 
+def create_hash_deputy
 
-puts get_deputy_email("http://www2.assemblee-nationale.fr/deputes/fiche/OMC_PA1874").class
+	deputy_hash = {}
+
+	get_url_deputy.each do |url|
+
+		deputy_hash [:first_name] = get_deputy_firstname(url)
+		deputy_hash[:second_name] = get_deputy_secondname(url)
+		deputy_hash [:email] = get_deputy_email(url)
+	end
+
+	return deputy_hash
+
+
+end
+
+
+puts create_hash_deputy
